@@ -1,0 +1,216 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container, .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Background Styles */
+.home-background {
+    background: url('background-home.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-background {
+    background: url('background-login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.register-background {
+    background: url('background-login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.welcome-background {
+    background: url('background-login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.gallery-background {
+    background: url('background-login.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Welcome Page Links */
+nav a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* Ensure the form container is centered and visible */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    margin: 50px auto;
+}
+
+label, input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+.form-group label,
+.form-group input {
+    display: inline-block; /* Ensures both label and input are on the same line */
+    vertical-align: middle; /* Aligns label and input vertically */
+    margin-right: 10px; /* Adds some space between label and input */
+}
+
+/* Style for buttons on the Home page */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Set a fixed width for the buttons */
+}
+
+/* Themed Section for About Us and Contact Us pages */
+.themed-section {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark, semi-transparent background */
+    color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Background styles for About Us and Contact Us */
+.about-us-background {
+    background-image: url('about-us-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.contact-us-background {
+    background-image: url('contact-us-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+/* Form styling for Contact Us page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* General Button Styling */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
