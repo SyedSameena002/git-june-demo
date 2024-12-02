@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <title>Understanding Object-Oriented Programming (OOP)</title>
+</head>
+<body>
+    <h1>Introduction to Object-Oriented Programming (OOP)</h1>
+
+    <p>Object-Oriented Programming (OOP) is a programming paradigm that uses <mark>objects</mark> and <mark>classes</mark> to structure software. This approach promotes <strong>modularity</strong>, <strong>reusability</strong>, and <strong>maintainability</strong> of code.</p>
+
+    <h2>Core Concepts of OOP</h2>
+
+    <h3>I) Classes and Objects</h3>
+    <p>A <strong>class</strong> is a blueprint for creating <mark>objects</mark>. It defines a type of object according to the data it holds and the operations that can be performed on it. An <strong>object</strong> is an instance of a class. For example, in a class <b>Car</b>, you might define properties like <i>color</i> and <i>model</i>, and methods like <em>drive()</em> and <em>brake()</em>.</p>
+
+    <h4>1. Encapsulation</h4>
+    <p><strong>Encapsulation</strong> is the concept of <mark>hiding</mark> the internal state of an object and requiring all interactions to be performed through an object's methods. This principle helps in protecting an object's state and ensuring that it is modified only in controlled ways.</p>
+    <h5>a) Access Modifiers</h5>
+      <pre> Encapsulation often uses access modifiers to control the visibility of the data and methods:
+             Private: Members declared as private are accessible only within the class itself. They cannot be accessed from outside the class.            
+             Protected: Members declared as protected are accessible within the class and by subclasses.
+             Public: Members declared as public can be accessed from anywhere.</pre>
+    <h5>b) Getter and Setter Methods</h5>
+      <pre> To control access to private data, classes typically provide public getter and setter methods. These methods allow controlled access to the private variables:
+             Getter Methods: These methods return the value of a private variable.
+             Setter Methods: These methods set the value of a private variable.</pre>    
+
+    <h4>2. Inheritance</h4>
+    <p><strong>Inheritance</strong> allows a new class to inherit properties and methods from an existing class. This promotes <mark>code reusability</mark> and establishes a natural hierarchy between classes. For instance, if you have a class <code>Vehicle</code>, you might create a subclass <b>Car</b> that inherits features from <u>Vehicle</u>.</p>
+          <h5>a) Superclass (Parent Class):</h5> <br>This is the class that provides the common properties and methods. It serves as the base class from which other classes derive.</br>
+          <h5>b) Subclass (Child Class):</h5>    <br>This is the class that inherits from the superclass. It inherits the attributes and methods of the superclass and can also have its own additional attributes and methods.</br>
+          <h5>c) Inheritance Types:</h5>
+               <pre>->Single Inheritance: A subclass inherits from a single superclass.
+                    ->Multiple Inheritance: A subclass inherits from more than one superclass. (Note: Some languages, like Java, do not support multiple inheritance directly to avoid complexity, but they provide alternative mechanisms like interfaces.)
+                    ->Multilevel Inheritance: A subclass inherits from another subclass, forming a chain of inheritance.
+                    ->Hierarchical Inheritance: Multiple subclasses inherit from a single superclass.
+                    ->Hybrid Inheritance: A combination of multiple types of inheritance (e.g., hierarchical and multiple).</pre>
+
+    <h4>3. Polymorphism</h4>
+    <p><strong>Polymorphism</strong> enables objects to be treated as instances of their parent class rather than their actual class. This concept allows for <mark>method overriding</mark> and <mark>overloading</mark>, enabling methods to perform different functions based on the object’s actual class.</p>
+              <h5>a) Types of Polymorphism</h5>
+                <pre> -> Compile-time Polymorphism (Static Binding)
+                           Method Overloading: This is when multiple methods have the same name but different parameters (different type or number of parameters) within the same class. The method to be invoked is determined at compile time based on the method signature.
+                           Operator Overloading: Some programming languages, like C++, support operator overloading where operators (like +, -, etc.) can be redefined to perform operations on user-defined types.</pre>    
+                <pre> -> Run-time Polymorphism (Dynamic Binding)
+                           Method Overriding: This is when a subclass provides a specific implementation of a method that is already defined in its superclass. The method to be invoked is determined at runtime based on the object’s actual class, not the reference type.
+                           Dynamic Method Dispatch: This mechanism is used to support method overriding. The JVM determines which method implementation to invoke based on the object’s runtime type.</pre>
+
+<h4>4. Abstraction</h4>
+    <p><strong>Abstraction</strong> involves hiding the complex implementation details of an object and exposing only the necessary features. It allows developers to interact with objects using a simplified interface. For example, when you use a <code>TV</code> remote, you don’t need to understand the internal workings of the remote or the TV to change the channel or adjust the volume.</p>
+             <h5>a)    Abstract Classes:</h5>
+                           <pre> An abstract class is a class that cannot be instantiated on its own and is meant to be subclassed. It can have abstract methods (methods without a body) that must be implemented by subclasses, as well as concrete methods (methods with a body) that provide default behavior.</pre>
+                           <pre> Abstract classes are used to define a common base with shared functionality and to enforce a contract for subclasses.</pre>
+             <h5>b)    Interfaces:</h5>
+                           <pre> An interface is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types. Interfaces cannot contain instance fields. They are used to define a contract that implementing classes must follow.</pre>
+                           <pre> Interfaces are used to achieve abstraction and multiple inheritance in languages that do not support multiple inheritance.</pre>
+    <h2>Example Code</h2>
+    <pre>
+public class Vehicle {
+private String colour;
+private String model;
+    <h5>//<small>Constrctor</small></h5>
+    public Vehicle(String colour, String model) {
+         this.colour = colour;
+         this.model = model;
+     }
+    public void drive() {
+        System.out.println("Man is driving Vehicle");
+    }
+}
+
+public class Car extends Vehicle {
+    <h5>@<small>Override</small></h5>
+    public void drive() {
+        System.out.println("Man is diriving Car");
+    }
+    public void brake() {
+        System.out.println("Man applying brake to Car");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myCar = new Car("Blue", "Honda");
+        myCar.drive();  // Outputs:Man is diriving Car
+        myCar.brake();  // Outputs:Man applying brake to Car
+    }
+}
+   </pre>
+<p> Here is a chemical formula H<sub>2</sub>O, ang here is the mathematical experssion x<sup>2</sup>
+    <p>This code demonstrates <strong>inheritance</strong> and <strong>polymorphism</strong>. The <b>Car</b> class inherits from <b>Vehicle</b> and overrides the <em>drive()</em> method. When the method is called on an <b>Animal</b> reference that points to a <strike>Dog</strike> <b>Car</b> object, it executes the <b>Car</b>'s version of the method.</p>
+
+    <h2>Conclusion</h2>
+    <p>OOP provides a clear structure for managing and organizing code. <br>By using concepts like <strong>encapsulation</strong>, <strong>inheritance</strong>, and <strong>polymorphism</strong>, developers can create robust and flexible software systems.<br></p>
+
+    
+</body>
+</html>
